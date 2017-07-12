@@ -17,7 +17,7 @@
                BlueprintIdentifier = "OBJ_858"
                BuildableName = "PerfectLib.framework"
                BlueprintName = "PerfectLib"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "OBJ_874"
                BuildableName = "PerfectThread.framework"
                BlueprintName = "PerfectThread"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "OBJ_883"
                BuildableName = "COpenSSL.framework"
                BlueprintName = "COpenSSL"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -59,7 +59,7 @@
                BlueprintIdentifier = "OBJ_1571"
                BuildableName = "PerfectCrypto.framework"
                BlueprintName = "PerfectCrypto"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -73,7 +73,7 @@
                BlueprintIdentifier = "OBJ_1590"
                BuildableName = "PerfectNet.framework"
                BlueprintName = "PerfectNet"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -87,7 +87,7 @@
                BlueprintIdentifier = "OBJ_1611"
                BuildableName = "PerfectHTTP.framework"
                BlueprintName = "PerfectHTTP"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -101,7 +101,7 @@
                BlueprintIdentifier = "OBJ_1636"
                BuildableName = "PerfectCZlib.framework"
                BlueprintName = "PerfectCZlib"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -115,7 +115,7 @@
                BlueprintIdentifier = "OBJ_1670"
                BuildableName = "PerfectHTTPServer.framework"
                BlueprintName = "PerfectHTTPServer"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -129,7 +129,7 @@
                BlueprintIdentifier = "OBJ_1709"
                BuildableName = "PerfectCHTTPParser.framework"
                BlueprintName = "PerfectCHTTPParser"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -143,7 +143,7 @@
                BlueprintIdentifier = "OBJ_1730"
                BuildableName = "MySQL.framework"
                BlueprintName = "MySQL"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -157,7 +157,7 @@
                BlueprintIdentifier = "OBJ_1737"
                BuildableName = "StORM.framework"
                BlueprintName = "StORM"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -171,7 +171,7 @@
                BlueprintIdentifier = "OBJ_1756"
                BuildableName = "SwiftMoment.framework"
                BlueprintName = "SwiftMoment"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -185,7 +185,7 @@
                BlueprintIdentifier = "OBJ_1768"
                BuildableName = "PerfectCURL.framework"
                BlueprintName = "PerfectCURL"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -199,7 +199,7 @@
                BlueprintIdentifier = "OBJ_1791"
                BuildableName = "PerfectLogger.framework"
                BlueprintName = "PerfectLogger"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -213,7 +213,7 @@
                BlueprintIdentifier = "OBJ_1815"
                BuildableName = "MySQLStORM.framework"
                BlueprintName = "MySQLStORM"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -227,7 +227,7 @@
                BlueprintIdentifier = "OBJ_1853"
                BuildableName = "PerfectMustache.framework"
                BlueprintName = "PerfectMustache"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -239,9 +239,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "OBJ_1872"
-               BuildableName = "MyFirstBackend"
-               BlueprintName = "MyFirstBackend"
-               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+               BuildableName = "SwiftURLShortener"
+               BlueprintName = "SwiftURLShortener"
+               ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -250,6 +250,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -260,6 +261,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -272,7 +274,7 @@
             BlueprintIdentifier = "OBJ_858"
             BuildableName = "PerfectLib.framework"
             BlueprintName = "PerfectLib"
-            ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+            ReferencedContainer = "container:SwiftURLShortener.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
