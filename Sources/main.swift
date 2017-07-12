@@ -10,7 +10,7 @@ let server = HTTPServer()
 server.documentRoot = "./webroot"
 
 MySQLConnector.host = "127.0.0.1"
-MySQLConnector.username = "root"
+MySQLConnector.username = "urluser"
 MySQLConnector.password = ""
 MySQLConnector.database = "testdb"
 MySQLConnector.port = 3306
