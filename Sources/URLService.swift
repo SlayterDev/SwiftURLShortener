@@ -15,18 +15,32 @@ struct URLService {
         
         var resp = [String:String]()
         
-        guard let theURL = request.param(name: "url") else {
-            Log.error(message: "URL missing from request")
-            
-            response.status = .badRequest
-            resp["error"] = "Please supply a url."
+        // Always set the response body and complete
+        defer {
             do {
                 try response.setBody(json: resp)
             } catch {
                 print(error)
             }
             response.completed()
+        }
+        
+        guard var theURL = request.param(name: "url") else {
+            Log.error(message: "URL missing from request")
+            
+            response.status = .badRequest
+            resp["error"] = "Please supply a url."
             return
+        }
+        
+        guard theURL.isURL() else {
+            response.status = .badRequest
+            resp["error"] = "That doesn't look like a URL. Try again."
+            return
+        }
+        
+        if !theURL.hasPrefix("http://") && !theURL.hasPrefix("https://") {
+            theURL = "http://" + theURL
         }
         
         if let existingEntry = getEntry(forURL: theURL) {
@@ -44,13 +58,6 @@ struct URLService {
                 resp["error"] = String(describing: error)
             }
         }
-        
-        do {
-            try response.setBody(json: resp)
-        } catch {
-            print(error)
-        }
-        response.completed()
     }
     
     static func getEntry(forURL url: String) -> URLEntry? {

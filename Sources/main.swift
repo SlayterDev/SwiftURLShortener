@@ -15,11 +15,6 @@ MySQLConnector.port = 3306
 let obj = URLEntry()
 try? obj.setup()
 
-public func useMysql(_ request: HTTPRequest, response: HTTPResponse) {
-    response.appendBody(string: "<html><title>Mysql Test</title><body>🖕</body></html>")
-    response.completed()
-}
-
 var routes = Routes()
 routes.add(method: .get, uri: "/", handler: { request, response in
 	response.setHeader(.contentType, value: "text/html")
@@ -27,6 +22,7 @@ routes.add(method: .get, uri: "/", handler: { request, response in
 	response.completed()
 })
 routes.add(method: .post, uri: "/use", handler: URLService.requestHandler(_:response:))
+routes.add(method: .get, uri: "/go/{shortCode}", handler: RedirectService.requestHandler(_:response:))
 
 server.addRoutes(routes)
 

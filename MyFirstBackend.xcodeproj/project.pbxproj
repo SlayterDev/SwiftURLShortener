@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		412332CB1F16568200CCC36F /* URLEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412332CA1F16568200CCC36F /* URLEntry.swift */; };
 		412332CD1F16596A00CCC36F /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412332CC1F16596A00CCC36F /* URLService.swift */; };
+		412332CF1F1662CF00CCC36F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412332CE1F1662CF00CCC36F /* StringExtensions.swift */; };
+		412332D11F1664B300CCC36F /* RedirectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412332D01F1664B300CCC36F /* RedirectService.swift */; };
 		OBJ_1000 /* cbc_cksm.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_252 /* cbc_cksm.c */; };
 		OBJ_1001 /* cbc_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_253 /* cbc_enc.c */; };
 		OBJ_1002 /* ccm128.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_254 /* ccm128.c */; };
@@ -1388,6 +1390,8 @@
 /* Begin PBXFileReference section */
 		412332CA1F16568200CCC36F /* URLEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLEntry.swift; sourceTree = "<group>"; };
 		412332CC1F16596A00CCC36F /* URLService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
+		412332CE1F1662CF00CCC36F /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		412332D01F1664B300CCC36F /* RedirectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedirectService.swift; sourceTree = "<group>"; };
 		OBJ_101 /* http_parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = http_parser.c; sourceTree = "<group>"; };
 		OBJ_103 /* http_parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http_parser.h; sourceTree = "<group>"; };
 		OBJ_104 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/bslayter/Xcode/TestProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectCHTTPParser/include/module.modulemap"; sourceTree = "<group>"; };
@@ -3352,6 +3356,8 @@
 				OBJ_8 /* main.swift */,
 				412332CA1F16568200CCC36F /* URLEntry.swift */,
 				412332CC1F16596A00CCC36F /* URLService.swift */,
+				412332CE1F1662CF00CCC36F /* StringExtensions.swift */,
+				412332D01F1664B300CCC36F /* RedirectService.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -4071,8 +4077,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				412332CF1F1662CF00CCC36F /* StringExtensions.swift in Sources */,
 				OBJ_1850 /* main.swift in Sources */,
 				412332CD1F16596A00CCC36F /* URLService.swift in Sources */,
+				412332D11F1664B300CCC36F /* RedirectService.swift in Sources */,
 				412332CB1F16568200CCC36F /* URLEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
