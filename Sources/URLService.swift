@@ -8,20 +8,19 @@
 
 import PerfectLib
 import PerfectHTTP
+import PerfectMustache
 
 struct URLService {
     static func requestHandler(_ request: HTTPRequest, response: HTTPResponse) {
-        response.setHeader(.contentType, value: "application/json")
+        response.setHeader(.contentType, value: "text/html")
         
         var resp = [String:String]()
         
-        // Always set the response body and complete
+        // Redirect to '/' to reload home
         defer {
-            do {
-                try response.setBody(json: resp)
-            } catch {
-                print(error)
-            }
+            response.setHeader(.contentType, value: "text/html")
+            response.status = .found // 302 temp redirect
+            response.setHeader(.location, value: "/")
             response.completed()
         }
         
@@ -73,5 +72,38 @@ struct URLService {
         }
         
         return nil
+    }
+}
+
+extension URLService: MustachePageHandler {
+    func extendValuesForResponse(context contxt: MustacheWebEvaluationContext, collector: MustacheEvaluationOutputCollector) {
+        var values = MustacheEvaluationContext.MapType()
+        let urlModel = URLEntry()
+        do {
+            try urlModel.findAll()
+        } catch {
+            print(error)
+        }
+        
+        var arr = [Any]()
+        for row in urlModel.rows() {
+            var thisURL = [String:String]()
+            thisURL["id"] = String(row.id)
+            thisURL["url"] = row.url
+            thisURL["shortURL"] = row.getShortURL()
+            arr.append(thisURL)
+        }
+        
+        values["urls"] = arr
+        contxt.extendValues(with: values)
+        
+        do {
+            try contxt.requestCompleted(withCollector: collector)
+        } catch {
+            let response = contxt.webResponse
+            response.status = .internalServerError
+            response.appendBody(string: "\(error)")
+            response.completed()
+        }
     }
 }

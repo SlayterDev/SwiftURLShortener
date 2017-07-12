@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_850"
+               BlueprintIdentifier = "OBJ_858"
                BuildableName = "PerfectLib.framework"
                BlueprintName = "PerfectLib"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_866"
+               BlueprintIdentifier = "OBJ_874"
                BuildableName = "PerfectThread.framework"
                BlueprintName = "PerfectThread"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_875"
+               BlueprintIdentifier = "OBJ_883"
                BuildableName = "COpenSSL.framework"
                BlueprintName = "COpenSSL"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1563"
+               BlueprintIdentifier = "OBJ_1571"
                BuildableName = "PerfectCrypto.framework"
                BlueprintName = "PerfectCrypto"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -70,7 +70,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1582"
+               BlueprintIdentifier = "OBJ_1590"
                BuildableName = "PerfectNet.framework"
                BlueprintName = "PerfectNet"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -84,7 +84,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1603"
+               BlueprintIdentifier = "OBJ_1611"
                BuildableName = "PerfectHTTP.framework"
                BlueprintName = "PerfectHTTP"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -98,7 +98,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1628"
+               BlueprintIdentifier = "OBJ_1636"
                BuildableName = "PerfectCZlib.framework"
                BlueprintName = "PerfectCZlib"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -112,7 +112,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1662"
+               BlueprintIdentifier = "OBJ_1670"
                BuildableName = "PerfectHTTPServer.framework"
                BlueprintName = "PerfectHTTPServer"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -126,7 +126,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1701"
+               BlueprintIdentifier = "OBJ_1709"
                BuildableName = "PerfectCHTTPParser.framework"
                BlueprintName = "PerfectCHTTPParser"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -140,7 +140,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1722"
+               BlueprintIdentifier = "OBJ_1730"
                BuildableName = "MySQL.framework"
                BlueprintName = "MySQL"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -154,7 +154,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1729"
+               BlueprintIdentifier = "OBJ_1737"
                BuildableName = "StORM.framework"
                BlueprintName = "StORM"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -168,7 +168,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1748"
+               BlueprintIdentifier = "OBJ_1756"
                BuildableName = "SwiftMoment.framework"
                BlueprintName = "SwiftMoment"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -182,7 +182,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1760"
+               BlueprintIdentifier = "OBJ_1768"
                BuildableName = "PerfectCURL.framework"
                BlueprintName = "PerfectCURL"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -196,7 +196,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1783"
+               BlueprintIdentifier = "OBJ_1791"
                BuildableName = "PerfectLogger.framework"
                BlueprintName = "PerfectLogger"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -210,7 +210,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1807"
+               BlueprintIdentifier = "OBJ_1815"
                BuildableName = "MySQLStORM.framework"
                BlueprintName = "MySQLStORM"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -224,7 +224,21 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1845"
+               BlueprintIdentifier = "OBJ_1853"
+               BuildableName = "PerfectMustache.framework"
+               BlueprintName = "PerfectMustache"
+               ReferencedContainer = "container:MyFirstBackend.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_1872"
                BuildableName = "MyFirstBackend"
                BlueprintName = "MyFirstBackend"
                ReferencedContainer = "container:MyFirstBackend.xcodeproj">
@@ -255,7 +269,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_850"
+            BlueprintIdentifier = "OBJ_858"
             BuildableName = "PerfectLib.framework"
             BlueprintName = "PerfectLib"
             ReferencedContainer = "container:MyFirstBackend.xcodeproj">
