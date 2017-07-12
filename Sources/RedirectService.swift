@@ -30,11 +30,8 @@ struct RedirectService {
         Log.info(message: "Redirecting /go/\(shortCode) to \(destination)")
         
         response.setHeader(.contentType, value: "text/html")
-        
         response.status = .found // 302 temp redirect
-        
         response.setHeader(.location, value: destination)
-        
         response.completed()
     }
 }
