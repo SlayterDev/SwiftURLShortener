@@ -26,7 +26,14 @@ struct URLService {
             response.completed()
         }
         
-        guard var theURL = request.param(name: "url") else {
+        guard let body = request.postBodyString, let json = try? body.jsonDecode() as? [String:Any] else {
+            Log.error(message: "Could not parse body.")
+            response.status = .badRequest
+            resp["error"] = "Could not parse body."
+            return
+        }
+        
+        guard var theURL = json?["url"] as? String else {
             Log.error(message: "URL missing from request")
             
             response.status = .badRequest
