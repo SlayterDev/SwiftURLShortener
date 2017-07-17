@@ -47,7 +47,7 @@ struct URLService {
             return
         }
         
-        let (shortURL, error) = saveURL(theURL)
+        let (shortURL, error) = saveURL(theURL, customShortCode: json?["customCode"] as? String)
         if let shortURL = shortURL {
             resp["shortURL"] = shortURL
         } else if let error = error {
@@ -59,8 +59,23 @@ struct URLService {
         }
     }
     
-    static func saveURL(_ theURL: String) -> (String?, Error?) {
-        if let existingEntry = getEntry(forURL: theURL) {
+    static func saveURL(_ theURL: String, customShortCode: String? = nil) -> (String?, Error?) {
+        if let shortCode = customShortCode {
+            if let existing = getEntry(forShortCode: shortCode) {
+                return (existing.getShortURL(), nil)
+            } else {
+                let urlModel = URLEntry()
+                urlModel.url = theURL
+                urlModel.shortCode = shortCode
+                do {
+                    try urlModel.save()
+                    return (urlModel.getShortURL(), nil)
+                } catch {
+                    Log.error(message: String(describing: error))
+                    return (nil, error)
+                }
+            }
+        } else if let existingEntry = getEntry(forURL: theURL) {
             return (existingEntry.getShortURL(), nil)
         } else {
             let urlModel = URLEntry()
@@ -93,6 +108,21 @@ struct URLService {
         let urlModel = URLEntry()
         do {
             try urlModel.select(whereclause: "url = ?", params: [url], orderby: ["id"])
+            if urlModel.rows().count > 0 {
+                return urlModel.rows().first
+            }
+        } catch {
+            print(error)
+            return nil
+        }
+        
+        return nil
+    }
+    
+    static func getEntry(forShortCode shortCode: String) -> URLEntry? {
+        let urlModel = URLEntry()
+        do {
+            try urlModel.select(whereclause: "shortCode = ?", params: [shortCode], orderby: ["id"])
             if urlModel.rows().count > 0 {
                 return urlModel.rows().first
             }
