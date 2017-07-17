@@ -26,6 +26,13 @@ routes.add(method: .get, uri: "/", handler: { request, response in
     
 	response.completed()
 })
+routes.add(method: .post, uri: "/", handler: { request, response in
+    response.setHeader(.contentType, value: "text/html")
+    
+    mustacheRequest(request: request, response: response, handler: URLService(), templatePath: request.documentRoot + "/index.mustache")
+    
+    response.completed()
+})
 routes.add(method: .post, uri: "/shorten", handler: URLService.requestHandler(_:response:))
 routes.add(method: .get, uri: "/go/{shortCode}", handler: RedirectService.requestHandler(_:response:))
 

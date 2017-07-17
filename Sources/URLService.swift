@@ -12,15 +12,17 @@ import PerfectMustache
 
 struct URLService {
     static func requestHandler(_ request: HTTPRequest, response: HTTPResponse) {
-        response.setHeader(.contentType, value: "text/html")
-        
         var resp = [String:String]()
         
         // Redirect to '/' to reload home
         defer {
-            response.setHeader(.contentType, value: "text/html")
-            response.status = .found // 302 temp redirect
-            response.setHeader(.location, value: "/")
+            response.setHeader(.contentType, value: "application/json")
+            do {
+                try response.setBody(json: resp)
+            } catch {
+                print(error)
+                response.status = .internalServerError
+            }
             response.completed()
         }
         
@@ -32,18 +34,27 @@ struct URLService {
             return
         }
         
-        guard theURL.isURL() else {
+        if let errorString = checkURL(&theURL) {
             response.status = .badRequest
-            resp["error"] = "That doesn't look like a URL. Try again."
+            resp["error"] = errorString
             return
         }
         
-        if !theURL.hasPrefix("http://") && !theURL.hasPrefix("https://") {
-            theURL = "http://" + theURL
+        let (shortURL, error) = saveURL(theURL)
+        if let shortURL = shortURL {
+            resp["shortURL"] = shortURL
+        } else if let error = error {
+            response.status = .internalServerError
+            resp["error"] = String(describing: error)
+        } else {
+            response.status = .internalServerError
+            resp["error"] = "Could not create short url at this time"
         }
-        
+    }
+    
+    static func saveURL(_ theURL: String) -> (String?, Error?) {
         if let existingEntry = getEntry(forURL: theURL) {
-            resp["shortURL"] = existingEntry.getShortURL()
+            return (existingEntry.getShortURL(), nil)
         } else {
             let urlModel = URLEntry()
             urlModel.url = theURL
@@ -51,12 +62,24 @@ struct URLService {
             urlModel.shortCode = String(identifier.characters.prefix(through: identifier.index(identifier.startIndex, offsetBy: 6)))
             do {
                 try urlModel.save()
-                resp["shortURL"] = urlModel.getShortURL()
+                return (urlModel.getShortURL(), nil)
             } catch {
                 print(error)
-                resp["error"] = String(describing: error)
+                return (nil, error)
             }
         }
+    }
+    
+    static func checkURL(_ theURL: inout String) -> String? {
+        guard theURL.isURL() else {
+            return "That doesn't look like a URL. Try again."
+        }
+        
+        if !theURL.hasPrefix("http://") && !theURL.hasPrefix("https://") {
+            theURL = "http://" + theURL
+        }
+        
+        return nil
     }
     
     static func getEntry(forURL url: String) -> URLEntry? {
@@ -77,6 +100,10 @@ struct URLService {
 
 extension URLService: MustachePageHandler {
     func extendValuesForResponse(context contxt: MustacheWebEvaluationContext, collector: MustacheEvaluationOutputCollector) {
+        if var theURL = contxt.webRequest.param(name: "url"), URLService.checkURL(&theURL) == nil {
+            let _ = URLService.saveURL(theURL)
+        }
+        
         var values = MustacheEvaluationContext.MapType()
         let urlModel = URLEntry()
         do {
