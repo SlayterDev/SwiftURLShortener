@@ -18,10 +18,10 @@ class URLEntry: MySQLStORM {
     override open func table() -> String { return "url_entries" }
     
     override func to(_ this: StORMRow) {
-        id = this.data["id"] as? Int ?? 0
+        id = Int(this.data["id"] as? Int32 ?? 0)
         url = this.data["url"] as? String ?? ""
         shortCode = this.data["shortCode"] as? String ?? ""
-        hits = this.data["hits"] as? Int ?? 0
+        hits = Int(this.data["hits"] as? Int32 ?? 0)
     }
     
     func rows() -> [URLEntry] {

@@ -125,6 +125,7 @@ extension URLService: MustachePageHandler {
             thisURL["id"] = String(row.id)
             thisURL["url"] = row.url
             thisURL["shortURL"] = row.getShortURL()
+            thisURL["hits"] = String(row.hits)
             arr.append(thisURL)
         }
         

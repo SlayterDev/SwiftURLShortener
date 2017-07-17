@@ -23,6 +23,13 @@ struct RedirectService {
             }
             
             if let result = urlModel.rows().first {
+                result.hits += 1
+                do {
+                    try result.save()
+                } catch {
+                    print(error)
+                }
+                
                 destination = result.url
             }
         }

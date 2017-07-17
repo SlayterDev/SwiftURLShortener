@@ -23,12 +23,14 @@
                 <th style="text-align: left">ID</th>
                 <th style="text-align: left">URL</th>
                 <th style="text-align: left">New Link</th>
+                <th style="text-align: left">Hits</th>
             </tr>
             {{#urls}}
             <tr>
                 <td style="text-align: left; padding-right: 10px">{{id}}</td>
                 <td style="text-align: left; padding-right: 10px">{{url}}</td>
                 <td style="text-align: left; padding-right: 10px"><a href="{{shortURL}}" target="_blank">{{shortURL}}</a></td>
+                <td style="text-align: left; padding-right: 10px">{{hits}}</td>
             </tr>
             {{/urls}}
         </table>
