@@ -26,9 +26,9 @@ class URLEntry: MySQLStORM {
     
     func rows() -> [URLEntry] {
         var rows = [URLEntry]()
-        for i in 0..<self.results.rows.count {
+        for rowResult in self.results.rows {
             let row = URLEntry()
-            row.to(self.results.rows[i])
+            row.to(rowResult)
             rows.append(row)
         }
         
